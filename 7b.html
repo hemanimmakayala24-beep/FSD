@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Window Object Demo</title>
+<script>
+function showWindowProperties() {
+document.getElementById("size").innerHTML =
+"Window Width: " + window.innerWidth +
+" px, Height: " + window.innerHeight + " px";
+document.getElementById("url").innerHTML =
+"Current URL: " + window.location.href;
+}
+function showAlert() {
+window.alert("This is an alert using window object");
+}
+
+function showConfirm() {
+var result = window.confirm("Do you like JavaScript?");
+document.getElementById("confirm").innerHTML =
+"Confirm Result: " + result;
+}
+function showPrompt() {
+var name = window.prompt("Enter your name:");
+document.getElementById("prompt").innerHTML =
+"Name Entered: " + name;
+}
+function openWindow() {
+window.open("https://www.example.com", "_blank");
+}
+</script>
+</head>
+<body onload="showWindowProperties()">
+<h2>Window Object Properties and Methods</h2>
+<p id="size"></p>
+<p id="url"></p>
+<button onclick="showAlert()">Alert</button>
+<button onclick="showConfirm()">Confirm</button>
+<button onclick="showPrompt()">Prompt</button>
+<button onclick="openWindow()">Open New Window</button>
+<p id="confirm"></p>
+<p id="prompt"></p>
+</body>
+</html>
